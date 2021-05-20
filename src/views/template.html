@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .container{
+            box-sizing: border-box;
+            margin: 0 auto;
+            padding: 60px 40px;
+            width: 1400px;
+            min-height: 478px;
+            display: flex;
+            justify-content: space-around;
+        }
+        .index1{
+            position: relative;
+            z-index: 1;
+        }
+        .common{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: absolute;
+            top: 36.2%;
+            height: 5%;
+        }
+        .box{
+            width: 600px;
+            height: 338px;
+            position: relative;
+            text-align: center;
+        }
+        .box-bg{
+            width: 100%;
+            height: 338px;
+            position: absolute;
+            left: 0;
+            top: 0;
+            background: #2C8FFF;
+            z-index: 0;
+        }
+        .box-img1{
+            width: 100%;
+            height: 302px;
+            margin-top: 36px;
+        }
+        .box-img2{
+            width: 100%;
+            height: 325px;
+            margin-bottom: 13px;
+        }
+        .descript{
+            margin-top: 10px;
+            line-height: 1.4;
+            color: #333;
+            font-size: 14px;
+        }
+        .corner{
+            right: 38%;
+            width: 7.08%;
+            border-radius: 31.25px 0 0 31.25px;
+            color: #fff;
+            font-size: 7.5px;
+            box-shadow: 0 3.12px 6.25px 0 rgba(0, 0, 0, 0.1);
+            z-index: 1;
+        }
+        .btn{
+            border-radius: 8.53px;
+            background: #fff;
+            font-size: 9.37px;
+            z-index: 1;
+        }
+        .btn1{
+            width: 9.06%;
+            right: 24.4%;
+        }
+        .btn2{
+            width: 10.7%;
+            right: 6.7%;
+        }
+        .svg-icon{
+            margin-top: 1px;
+            margin-left: 2px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box">
+            <img src="" alt="背景图" class="box-bg" />
+            <img src="./assets/img_download.png" alt="登录" class="box-img1 index1" />
+            <p class="descript">登陆页</p>
+        </div>
+        <div class="box">
+            <img src="" alt="背景图" class="box-bg" />
+            <img src="./assets/img_home.png" alt="首页" class="box-img2 index1" />
+            <p class="descript">首页</p>
+            <div class="common corner" style="background: linear-gradient(312deg, #5A82FF 0%, #3BADFF 100%);">活动推荐</div>
+            <div class="common btn btn1" style="color: #2C8FFF">排行榜 
+                <svg t="1621498374862" class="svg-icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="6102" width="8" height="8">
+                    <g fill="#2C8FFF">
+                        <path d="M541.257143 487.862857L237.714286 83.748571c-1.462857-1.828571-3.291429-3.657143-5.485715-5.485714a26.770286 26.770286 0 0 0-37.302857 5.485714l-4.754285 6.582858a36.205714 36.205714 0 0 0 1e-8 43.885714L473.965714 512 190.17142901 889.782857a36.205714 36.205714 0 0 0-1e-8 43.885714l4.754285 6.582858a26.441143 26.441143 0 0 0 42.788572 0l303.542857-404.114286c5.485714-6.94857099 7.68-15.725714 7.31428599-24.137143 0.36571399-8.411429-1.828571-16.822857-7.31428599-24.137143z" p-id="6103"></path><path d="M906.971429 487.86285701L603.428571 83.748571a26.441143 26.441143 0 0 0-42.788571 0l-4.754286 6.582858a36.205714 36.205714 0 0 0 0 43.885714L839.68 512 555.885714 889.782857a36.205714 36.205714 0 0 0 0 43.885714l4.754286 6.582858a26.441143 26.441143 0 0 0 42.788571 0l303.542858-404.11428601c5.485714-6.94857099 7.68-15.725714 7.31428499-24.13714299 0.36571399-8.411429-1.828571-16.822857-7.31428499-24.13714299z" p-id="6104"></path>
+                    </g>
+                </svg>
+            </div>
+            <div class="common btn btn2" style="color: #2C8FFF">名家示范
+                <svg t="1621498374862" class="svg-icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="6102" width="8" height="8">
+                    <g fill="#2C8FFF">
+                        <path d="M541.257143 487.862857L237.714286 83.748571c-1.462857-1.828571-3.291429-3.657143-5.485715-5.485714a26.770286 26.770286 0 0 0-37.302857 5.485714l-4.754285 6.582858a36.205714 36.205714 0 0 0 1e-8 43.885714L473.965714 512 190.17142901 889.782857a36.205714 36.205714 0 0 0-1e-8 43.885714l4.754285 6.582858a26.441143 26.441143 0 0 0 42.788572 0l303.542857-404.114286c5.485714-6.94857099 7.68-15.725714 7.31428599-24.137143 0.36571399-8.411429-1.828571-16.822857-7.31428599-24.137143z" p-id="6103"></path><path d="M906.971429 487.86285701L603.428571 83.748571a26.441143 26.441143 0 0 0-42.788571 0l-4.754286 6.582858a36.205714 36.205714 0 0 0 0 43.885714L839.68 512 555.885714 889.782857a36.205714 36.205714 0 0 0 0 43.885714l4.754286 6.582858a26.441143 26.441143 0 0 0 42.788571 0l303.542858-404.11428601c5.485714-6.94857099 7.68-15.725714 7.31428499-24.13714299 0.36571399-8.411429-1.828571-16.822857-7.31428499-24.13714299z" p-id="6104"></path>
+                    </g>
+                </svg>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
