@@ -2,18 +2,18 @@
   <div class="container">
     <div class="box">
       <img :src="bgImg[0]" alt="背景图" class="box-bg" />
-      <img src="./assets/img_download.png" alt="登录" class="box-img1" />
+      <img src="../assets/img_download.png" alt="登录" class="box-img1" />
       <p class="descript">登陆页</p>
     </div>
     <div class="box">
       <img :src="bgImg[1]" alt="背景图" class="box-bg" />
-      <img src="./assets/img_home.png" alt="首页" class="box-img2" />
+      <img src="../assets/img_home.png" alt="首页" class="box-img2" />
       <p class="descript">首页</p>
       <div class="corner" :style="{ background: themeBgColor }">活动推荐</div>
-      <div class="btn btn1" :style="{ color: themeColor }">
+      <div class="btnFont btn1" :style="{ color: themeColor }">
         排行榜 <svg-icon icon-class="arrow"></svg-icon>
       </div>
-      <div class="btn btn2" :style="{ color: themeColor }">
+      <div class="btnFont btn2" :style="{ color: themeColor }">
         名家示范 <svg-icon icon-class="arrow"></svg-icon>
       </div>
     </div>
@@ -35,6 +35,7 @@ export default {
 * {
   margin: 0;
   padding: 0;
+  border: 0 none;
 }
 %flex {
   display: flex;
@@ -94,14 +95,15 @@ export default {
     .corner {
       @extend .common;
       right: 38%;
-      width: 7.08%;
+      width: 9.08%;
+      height: 5.18%;
       border-radius: 31.25px 0 0 31.25px;
       color: #fff;
       font-size: 7.5px;
       box-shadow: 0 3.12px 6.25px 0 rgba(0, 0, 0, 0.1);
       z-index: 1;
     }
-    .btn {
+    .btnFont {
       @extend .common;
       border-radius: 8.53px;
       background: #fff;
