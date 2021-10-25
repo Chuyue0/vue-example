@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>小程序素材详情页预览</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            border: 0 none;
+            font-family: "PingFangSC-Medium","PingFang SC","NotoSansSC-Medium","Noto Sans SC";
+        }
+        ::-webkit-scrollbar-track-piece{
+            background: transparent;
+        }
+        ::-webkit-scrollbar {
+            width: 6px;height: 10px;
+        }
+        ::-webkit-scrollbar-thumb{
+            background: rgba(153, 153, 153, 0.5);
+            border-radius: 12px;
+        }
+        .container{
+            width: 100%;
+            max-width: 375px;
+            height: 100vh;
+            background: url('https://reading.oss.iyougu.com/uploads/V_icon/record_bg.png') no-repeat;
+            background-size: 100% auto;
+            overflow-y: auto;
+            color: #333;
+            font-size: 18px;
+            font-weight: 500;
+        }
+        .container .title{
+            width: calc(100% - 100px);
+            margin: 0 auto;
+            padding-top: 72px;
+            line-height: 1.1;
+            text-align: center;
+            font-size: 22px;
+        }
+        .container .author{
+            max-width: 69%;
+            margin: 40px auto 0;
+            line-height: 1;
+            text-align: center;
+            color: #666;
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+        }
+        .container .content{
+            box-sizing: border-box;
+            width: 76%;
+            margin: 0 auto;
+            padding-bottom: 100px;
+            line-height: 52px;
+            word-break: break-word;
+        }
+        .container .content.center{
+            text-align: center;
+        }
+        .container .content.left{
+            text-align: left;
+        }
+        .container .content.right{
+            text-align: right;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="title">将进酒</div>
+        <div class="author">李白</div>
+        <div class="content right">content: 
+        </div>
+        <!-- 注释：
+        ↵ 替换为 <br>
+         （空格）替换为 &nbsp;
+        -->
+    </div>
+</body>
+<script lang="text/javascript">
+    let content="君不见，黄河之水天上来，      奔流到海不复回。↵君不见，高堂明镜悲白发，朝如青丝暮成雪。↵人生得意须尽欢，莫使金樽空对月。↵天生我材必有用，千金散尽还复来。↵烹羊宰牛且为乐，会须一饮三百杯。↵岑夫子，丹丘生，将进酒，杯莫停。↵与君歌一曲，请君为我倾耳听。↵钟鼓馔玉不足贵，但愿长醉不复醒。↵古来圣贤皆寂寞，惟有饮者留其名。↵陈王昔时宴平乐，斗酒十千恣欢谑。↵主人何为言少钱，径须沽取对君酌。↵五花马，千金裘，呼儿将出换美酒，与尔同销万古愁。";
+    content=content.replace(/↵/g, "<br>");
+    document.querySelector('.content').innerText =content;
+    console.log(1,content);
+</script>
+</html>
