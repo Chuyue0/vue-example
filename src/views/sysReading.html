@@ -12,10 +12,77 @@
             border: 0 none;
             font-family: "PingFangSC-Medium","PingFang SC","NotoSansSC-Medium","Noto Sans SC";
         }
-        .container{}
+        ::-webkit-scrollbar-track-piece{
+            background: transparent;
+        }
+        ::-webkit-scrollbar {
+            width: 4px;height: 5px;
+        }
+        ::-webkit-scrollbar-thumb{
+            background: rgba(248, 248, 248, 0.5);
+            border-radius: 6px;
+        }
+        .container{
+            width: 800px;
+            height: 450px;
+            background: url('https://reading.oss.iyougu.com/uploads/ygldMP/sysReadingBg2.png') no-repeat;
+            background-size: 100% auto;
+            color: #fff;
+            font-size: 12px;
+            font-weight: 500;
+        }
+        .container .title{
+            width: calc(100% - 100px);
+            margin: 0 auto;
+            padding-top: 70px;
+            line-height: 1.1;
+            text-align: center;
+            font-size: 14px;
+        }
+        .container .author{
+            margin: 10px auto 12px;
+            line-height: 1;
+            text-align: center;
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+        }
+        .container .content{
+            box-sizing: border-box;
+            width: 500px;
+            height: 246px;
+            margin: 0 auto;
+            padding: 0 55px 30px 55px;
+            line-height: 30px;
+            word-break: break-word;
+            overflow-y: auto;
+        }
+        .container .content.center{
+            text-align: center;
+        }
+        .container .content.left{
+            text-align: left;
+        }
+        .container .content.right{
+            text-align: right;
+        }
     </style>
 </head>
 <body>
-    <div class="container"></div>
+    <div class="container">
+        <div class="title">将进酒</div>
+        <div class="author">李白</div>
+        <div class="content right">content: 
+        </div>
+        <!-- 注释：
+        ↵ 替换为 <br>
+         （空格）替换为 &nbsp;
+        -->
+    </div>
 </body>
+<script lang="text/javascript">
+    let content="君不见，黄河之水天上来，      奔流到海不复回。↵君不见，高堂明镜悲白发，朝如青丝暮成雪。↵人生得意须尽欢，莫使金樽空对月。↵天生我材必有用，千金散尽还复来。↵烹羊宰牛且为乐，会须一饮三百杯。↵岑夫子，丹丘生，将进酒，杯莫停。↵与君歌一曲，请君为我倾耳听。↵钟鼓馔玉不足贵，但愿长醉不复醒。↵古来圣贤皆寂寞，惟有饮者留其名。↵陈王昔时宴平乐，斗酒十千恣欢谑。↵主人何为言少钱，径须沽取对君酌。↵五花马，千金裘，呼儿将出换美酒，与尔同销万古愁。";
+    document.querySelector('.content').innerHTML =content.replace(/( )/g, "&nbsp;").replace(/↵/g, "<br>");
+    console.log(1,content);
+</script>
 </html>
